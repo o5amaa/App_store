@@ -22,7 +22,7 @@ class PageTest extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .headline3!
-                .copyWith(color: AppColors.myBlue),
+                .copyWith(color: AppColors.myGreen),
           )
         ],
       ),
@@ -47,7 +47,7 @@ class PageTest extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {},
-              child: Text(KeyLang.selectLang),
+              child: Text(KeyLang.selectLanguage),
             )
           ],
         ),

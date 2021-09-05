@@ -2,8 +2,16 @@
     "click": "Click",
     "appName": "App Store",
     "selectLanguage": "Selecte Language",
-    "newsTap": "News",
-    "gamesTap": "Games",
-    "pramiumTap": "Pramium",
-    "nameUser": "osama Hamdain"
+    "newsTab": "News",
+    "gamesTab": "Games",
+    "pramiumTab": "Pramium",
+    "mediatabTab": "Media",
+    "nameUser": "osama Hamdain",
+    "myApps": "My Apps",
+    "terms": "Terms & Conditons",
+    "themes": "Themes",
+    "language": "Language",
+    "arabic": "Arabic",
+    "english": "english",
+    "cancel": "Cancel"
 }

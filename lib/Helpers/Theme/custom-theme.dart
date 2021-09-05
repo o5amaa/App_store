@@ -9,6 +9,7 @@ class CustomTheme {
     //? //////// primaryColor ////////////////
     primaryColor: AppColors.mineColorLight,
     accentColor: AppColors.mineColorLight,
+    iconTheme: IconThemeData(color: AppColors.bodyTitleColorLight.withRed(100)),
 
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
@@ -80,7 +81,9 @@ class CustomTheme {
       //
       button: AppStyles.styleButtonLight,
       //
-    ).apply(displayColor: Colors.black, bodyColor: Colors.black),
+    ).apply(
+        displayColor: AppColors.parTitleColorLight,
+        bodyColor: AppColors.parTitleColorLight),
 
     //? ******** floatingActionButtonTheme *****************
     floatingActionButtonTheme: FloatingActionButtonThemeData(

@@ -1,9 +1,17 @@
 {
-    "click":"ضغط هنا",
+    "click": "ضغط هنا",
     "appName": "متجر التطبيقات",
     "selectLanguage": "يراجى اختيار اللغة",
-    "newsTap": "أخبار",
-    "gamesTap": "اللعاب",
-    "pramiumTap": "الممتازة",
-    "nameUser": "اسامة الهمداني"
+    "newsTab": "أخبار",
+    "gamesTab": "اللعاب",
+    "pramiumTab": "الممتازة",
+    "mediatabTab": "التواصل الاجتماعي",
+    "nameUser": "اسامة الهمداني",
+    "myApps": "تطبيقاتي",
+    "terms": "",
+    "themes": "تغيل الثيم",
+    "language": "تغيير اللغة",
+    "arabic": "عربي",
+    "english": "إنجليزي",
+    "cancel": "إلغاء"
 }
