@@ -7,7 +7,7 @@ class ListTileDrawer extends StatelessWidget {
   const ListTileDrawer({
     required String icon,
     required String title,
-    Icon? iconTrailing,
+    Widget? iconTrailing,
     required Function() onPress,
   })  : _icon = icon,
         _iconTrailing = iconTrailing,
@@ -15,7 +15,7 @@ class ListTileDrawer extends StatelessWidget {
         _onPress = onPress;
 
   final String _icon, _title;
-  final Icon? _iconTrailing;
+  final Widget? _iconTrailing;
   final Function() _onPress;
 
   @override

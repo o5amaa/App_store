@@ -1,3 +1,4 @@
+import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fprovid_app/Helpers/Language/generated/key-lang.dart';
@@ -7,15 +8,21 @@ import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/alert-dialog
 import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/Components/custom-til.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/header-drawer.dart';
 import 'package:fprovid_app/Packages/Widgets/inner-page/inner-page.dart';
+import 'package:fprovid_app/services/state-theme.dart';
 
-class ListDrawer extends StatelessWidget {
+class ListDrawer extends StatefulWidget {
   const ListDrawer({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    // ignore: unused_local_variable
-    double _sw = MediaQuery.of(context).size.width;
+  _ListDrawerState createState() => _ListDrawerState();
+}
 
+class _ListDrawerState extends State<ListDrawer> {
+  String _themeText = KeyLang.auto;
+  @override
+  Widget build(BuildContext context) {
+    // double _sw = MediaQuery.of(context).size.width;
+    _themeText = StateTheme.checkStateTheme(context);
     return
         // SafeArea(
         // child:
@@ -50,8 +57,9 @@ class ListDrawer extends StatelessWidget {
               // *  *** Theme
               ListTileDrawer(
                 icon: PathIcons.theme,
-                title: KeyLang.themes,
-                iconTrailing: Icon(Icons.access_alarm),
+                // ? in list on drawer ..
+                title: _themeText,
+                iconTrailing: EasyDynamicThemeBtn(),
                 onPress: () {},
               ),
               // * *** Terms
@@ -79,4 +87,4 @@ class ListDrawer extends StatelessWidget {
 }
 
 // *  ? :
-// * ?? 
+// * ??

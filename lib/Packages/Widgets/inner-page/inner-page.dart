@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fprovid_app/Helpers/Theme/app_colors.dart';
 import 'package:fprovid_app/Packages/Widgets/Web/web-view.dart';
 
 class InnerPage extends StatelessWidget {
@@ -16,7 +17,10 @@ class InnerPage extends StatelessWidget {
         centerTitle: true,
         title: Text(
           _title,
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context)
+              .textTheme
+              .headline5
+              ?.copyWith(color: AppColors.myWhite),
         ),
       ),
       // * *** Body

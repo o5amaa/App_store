@@ -23,7 +23,7 @@ class FlagDrawer extends StatelessWidget {
       },
       child: Container(
         width: 100.w,
-        height: 110.h,
+        height: 134.h,
         child: Column(
           children: [
             // * Flag ..

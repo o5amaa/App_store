@@ -14,4 +14,7 @@ class KeyLang {
   static String arabic = "arabic";
   static String english = "english";
   static String cancel = "cancel";
+  static String auto = "auto";
+  static String light = "light";
+  static String dark = "dark";
 }

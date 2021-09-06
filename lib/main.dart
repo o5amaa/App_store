@@ -1,3 +1,4 @@
+import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,15 +14,18 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized(); //? Acces to Engine
   await EasyLocalization.ensureInitialized(); //* Acces to Engine [Lang-Wifi]
   runApp(
-    // ? Laguage
-    EasyLocalization(
-      supportedLocales: [
-        ConfigLanguage.AR_LOCALE,
-        ConfigLanguage.EN_LOCALE,
-      ],
-      path: ConfigLanguage.LANG_PATH,
-      fallbackLocale: ConfigLanguage.EN_LOCALE,
-      child: MyApp(),
+    // ? chang theme
+    EasyDynamicThemeWidget(
+      // ? Laguage translit
+      child: EasyLocalization(
+        supportedLocales: [
+          ConfigLanguage.AR_LOCALE,
+          ConfigLanguage.EN_LOCALE,
+        ],
+        path: ConfigLanguage.LANG_PATH,
+        fallbackLocale: ConfigLanguage.EN_LOCALE,
+        child: MyApp(),
+      ),
     ),
   );
 }
@@ -44,6 +48,8 @@ class MyApp extends StatelessWidget {
             // ? Themes
             theme: CustomTheme.lightTheme,
             darkTheme: CustomTheme.darkTheme,
+            // ! chang the them
+            themeMode: EasyDynamicTheme.of(context).themeMode,
             // ? Laguage
             localizationsDelegates: context.localizationDelegates,
             supportedLocales: context.supportedLocales,

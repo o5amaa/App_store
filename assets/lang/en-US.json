@@ -13,5 +13,8 @@
     "language": "Language",
     "arabic": "Arabic",
     "english": "english",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "auto": "Automatic",
+    "light": "Light",
+    "dark": "Dark"
 }
