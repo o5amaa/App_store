@@ -17,4 +17,5 @@ class KeyLang {
   static String auto = "auto";
   static String light = "light";
   static String dark = "dark";
+  static String megabyte = "megabyte";
 }

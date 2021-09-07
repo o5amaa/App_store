@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/list-drawer.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/custom-appbar.dart';
+import 'package:fprovid_app/Packages/Screens/News/View/page-news.dart';
 
 class PageHome extends StatelessWidget {
   static const String id = 'PageHome';
   final _pages = [
-    Container(color: Colors.red),
+    PageNews(),
     Container(color: Colors.blue),
     Container(color: Colors.white),
     Container(color: Colors.pink),

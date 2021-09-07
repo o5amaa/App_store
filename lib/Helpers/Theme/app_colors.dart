@@ -16,12 +16,14 @@ class AppColors {
   static Color myGray = _colorFromHex('#A1A1A1');
   static Color myGreen = _colorFromHex('#216E38');
 
-  //* Color Light .. 0xFFE9DA50
+  //* Color Light .. 0xFF
   static Color mineColorLight = _colorFromHex('#756B0E');
   static Color parTitleColorLight = _colorFromHex('#2E2A22');
   static Color bodyTitleColorLight = _colorFromHex('#49402F');
 
   static Color profileLoadingLight = _colorFromHex('#0A4091');
+  // *
+  static Color mbColorLight = _colorFromHex('#FFBB00');
 
   //* Color Dark .. 0xFF
   static Color mineColorDark = _colorFromHex('#3B3529');

@@ -8,8 +8,8 @@ class PathImages {
   // static String imageProfile =
   //     'https://app-store-v2.herokuapp.com/images/profile.jpeg';
   static String saudi = 'assets/images/login.jpg';
-  static String unitedStates = 'assets/images/thumbnail.png';
-  static String notFoundImage = 'assets/images/avatar.png';
+  static String unitedStates = 'assets/images/avatar.png';
+  static String notFoundImage = 'assets/images/thumbnail.png';
 
 //* ***********  Path Netwark Images **************
   static const imageProfile =
