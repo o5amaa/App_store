@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fprovid_app/Packages/Screens/Games/View/page-games.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/list-drawer.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/custom-appbar.dart';
 import 'package:fprovid_app/Packages/Screens/News/View/page-news.dart';
@@ -7,7 +8,7 @@ class PageHome extends StatelessWidget {
   static const String id = 'PageHome';
   final _pages = [
     PageNews(),
-    Container(color: Colors.blue),
+    PageGames(),
     Container(color: Colors.white),
     Container(color: Colors.pink),
   ];
