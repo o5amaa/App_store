@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fprovid_app/Api/api-controller.dart';
+import 'package:fprovid_app/Helpers/Utils/path-images.dart';
 import 'package:fprovid_app/Packages/Screens/News/Components/card-news.dart';
 import 'package:fprovid_app/Packages/Screens/News/Model/controller-news.dart';
 import 'package:fprovid_app/Packages/Screens/News/Model/news.dart';
 import 'package:fprovid_app/Packages/Widgets/Loading/app-loading.dart';
 import 'package:fprovid_app/Packages/Widgets/Loading/enum-loading.dart';
 import 'package:fprovid_app/services/language-status.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PageNews extends StatefulWidget {
   static const String id = 'PageNews';
@@ -38,11 +40,19 @@ class _PageNewsState extends State<PageNews> {
       ),
       builder: (context, snapshot) {
         // ? [ اذا كان الداتا في الطرق سوي لاودنق] || [اذا ما فيش دادتا]
-        if (snapshot.connectionState == ConnectionState.waiting ||
-            !snapshot.hasData) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
           return Scaffold(
             body: Center(
               child: AppLoading(chooseLoading: ChooseLoading.PAGE),
+            ),
+          );
+        } else if (!snapshot.hasData) {
+          return Scaffold(
+            body: Center(
+              child: CircleAvatar(
+                radius: 80.r,
+                backgroundImage: AssetImage(PathImages.notFoundImage),
+              ),
             ),
           );
         }

@@ -26,11 +26,19 @@ class PageGames extends StatelessWidget {
           future: getDataGame(
               codeLanguag: StatusLanguage.getLocalLangCode(context: context)),
           builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting ||
-                !snapshot.hasData) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
               return Scaffold(
                 body: Center(
                   child: AppLoading(chooseLoading: ChooseLoading.PAGE),
+                ),
+              );
+            } else if (!snapshot.hasData) {
+              return Scaffold(
+                body: Center(
+                  child: CircleAvatar(
+                    radius: 80.r,
+                    backgroundImage: AssetImage(PathImages.notFoundImage),
+                  ),
                 ),
               );
             }
