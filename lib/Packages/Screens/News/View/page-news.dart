@@ -5,6 +5,7 @@ import 'package:fprovid_app/Packages/Screens/News/Model/controller-news.dart';
 import 'package:fprovid_app/Packages/Screens/News/Model/news.dart';
 import 'package:fprovid_app/Packages/Widgets/Loading/app-loading.dart';
 import 'package:fprovid_app/Packages/Widgets/Loading/enum-loading.dart';
+import 'package:fprovid_app/services/language-status.dart';
 
 class PageNews extends StatefulWidget {
   static const String id = 'PageNews';
@@ -23,8 +24,8 @@ class _PageNewsState extends State<PageNews> {
     super.initState();
   }
 
-  Future<ModelControllerNews> getDataNews() async {
-    return _pdata = await _api.getNews(language: 'en');
+  Future<ModelControllerNews> getDataNews({required String codeLanguag}) async {
+    return _pdata = await _api.getNews(language: codeLanguag);
   }
 
   @override
@@ -32,7 +33,9 @@ class _PageNewsState extends State<PageNews> {
     return FutureBuilder<ModelControllerNews>(
       // ? تغمل ريكوست مبدءها  await
       // future: _api.getNews(language: 'en'),
-      future: getDataNews(),
+      future: getDataNews(
+        codeLanguag: StatusLanguage.getLocalCode(context: context),
+      ),
       builder: (context, snapshot) {
         // ? [ اذا كان الداتا في الطرق سوي لاودنق] || [اذا ما فيش دادتا]
         if (snapshot.connectionState == ConnectionState.waiting ||
