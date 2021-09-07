@@ -23,7 +23,7 @@ class CardNews extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(8.w),
               //  * Id App
-              child: Text('1'),
+              child: Text(_data.id ?? ''),
             ),
             SizedBox(width: 10.w),
             // * Image App
