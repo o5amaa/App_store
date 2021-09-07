@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fprovid_app/Helpers/Utils/path-images.dart';
+import 'package:fprovid_app/Packages/Screens/Games/Model/game.dart';
 import 'package:fprovid_app/Packages/Widgets/Cach-image/image-game.dart';
 
 class CardGame extends StatelessWidget {
-  const CardGame({Key? key}) : super(key: key);
+  CardGame({Key? key, required ModelGame data})
+      : _data = data,
+        super(key: key);
+
+  final ModelGame _data;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,7 @@ class CardGame extends StatelessWidget {
                   // * عنصر فوق عنصر
                   children: [
                     // * Image
-                    ImageGame(image: PathImages.imageProfile), // ***
+                    ImageGame(image: _data.imageUrl!), // ***
                     Positioned(
                       // * تحكم بمكان العنصر
                       child: Center(
@@ -43,7 +47,7 @@ class CardGame extends StatelessWidget {
               Expanded(
                 child: Center(
                   child: Text(
-                    'Test Game..',
+                    _data.nameApp!,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),

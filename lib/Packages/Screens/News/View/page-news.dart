@@ -34,7 +34,7 @@ class _PageNewsState extends State<PageNews> {
       // ? تغمل ريكوست مبدءها  await
       // future: _api.getNews(language: 'en'),
       future: getDataNews(
-        codeLanguag: StatusLanguage.getLocalCode(context: context),
+        codeLanguag: StatusLanguage.getLocalLangCode(context: context),
       ),
       builder: (context, snapshot) {
         // ? [ اذا كان الداتا في الطرق سوي لاودنق] || [اذا ما فيش دادتا]
@@ -50,13 +50,14 @@ class _PageNewsState extends State<PageNews> {
         if (snapshot.hasData) {
           List<ModelNews> _dataNewsList = snapshot.data?.listNews ?? [];
           return Scaffold(
-              body: ListView.builder(
-            itemCount: _dataNewsList.length,
-            itemBuilder: (context, index) {
-              ModelNews _dataNews = _dataNewsList.elementAt(index);
-              return CardNews(data: _dataNews);
-            },
-          ));
+            body: ListView.builder(
+              itemCount: _dataNewsList.length,
+              itemBuilder: (context, index) {
+                ModelNews _dataNews = _dataNewsList.elementAt(index);
+                return CardNews(data: _dataNews);
+              },
+            ),
+          );
         } else {
           return Scaffold(
             body: Center(

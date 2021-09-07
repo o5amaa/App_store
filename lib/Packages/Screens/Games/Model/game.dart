@@ -18,7 +18,8 @@ class ModelGame {
   });
 
   ModelGame.fromJson(Map<String, dynamic> json)
-      : assert(json.isNotEmpty),
+      : assert(json.isNotEmpty), // * test is not empty ..
+        // ? the same if statment using of constracter ..
         id = json['id'],
         nameApp = json['nameApp'],
         imageUrl = json['imageUrl'],
