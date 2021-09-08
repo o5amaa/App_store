@@ -15,11 +15,15 @@ class AppColors {
   static Color myBlack = _colorFromHex('#000000');
   static Color myGray = _colorFromHex('#A1A1A1');
   static Color myGreen = _colorFromHex('#216E38');
+  static Color myYellow = _colorFromHex('#FFBB00');
 
   //* Color Light .. 0xFF
+  static Color blueDetailsBG = _colorFromHex('#a2e7f5');
   static Color mineColorLight = _colorFromHex('#756B0E');
   static Color parTitleColorLight = _colorFromHex('#2E2A22');
   static Color bodyTitleColorLight = _colorFromHex('#49402F');
+  static Color lightModeInstallBtn = _colorFromHex('#456369');
+  static Color lightModeUnInstallBtn = _colorFromHex('#e95f44');
 
   static Color profileLoadingLight = _colorFromHex('#0A4091');
   // *
@@ -27,4 +31,5 @@ class AppColors {
 
   //* Color Dark .. 0xFF
   static Color mineColorDark = _colorFromHex('#3B3529');
+  static Color darkMode = _colorFromHex('#3A3B3C');
 }
