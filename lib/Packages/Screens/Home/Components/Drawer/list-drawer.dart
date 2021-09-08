@@ -27,59 +27,63 @@ class _ListDrawerState extends State<ListDrawer> {
         // SafeArea(
         // child:
         Drawer(
-      child: Column(
-        children: [
-          // * Header ********
-          HeaderDrawer(),
-          Column(
-            children: [
-              // * *** MyApp
-              ListTileDrawer(
-                icon: PathIcons.myApp,
-                title: KeyLang.myApps,
-                onPress: () {},
-              ),
-              // * *** Translate
-              ListTileDrawer(
-                icon: PathIcons.translate,
-                title: KeyLang.language,
-                onPress: () {
-                  showDialog(
-                    barrierDismissible: false,
-                    context: context,
-                    builder: (context) {
-                      // * AlertDialogDrawer ******
-                      return AlertDialogDrawer();
-                    },
-                  );
-                },
-              ),
-              // *  *** Theme
-              ListTileDrawer(
-                icon: PathIcons.theme,
-                // ? in list on drawer ..
-                title: _themeText,
-                iconTrailing: EasyDynamicThemeBtn(),
-                onPress: () {},
-              ),
-              // * *** Terms
-              ListTileDrawer(
-                icon: PathIcons.terms,
-                title: KeyLang.terms,
-                // ? **** OnPress = onTap in List ..
-                onPress: () {
-                  var route = MaterialPageRoute(
-                    builder: (context) => InnerPage(
-                      title: KeyLang.terms.tr(),
-                      url: PathUrlPage.urlTerms,
-                    ),
-                  );
-                  Navigator.push(context, route);
-                },
-              ),
-            ],
-          )
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            // * Header ********
+            HeaderDrawer(),
+            Column(
+              children: [
+                // * *** MyApp
+                ListTileDrawer(
+                  icon: PathIcons.myApp,
+                  title: KeyLang.myApps,
+                  onPress: () {},
+                ),
+                // * *** Translate
+                ListTileDrawer(
+                  icon: PathIcons.translate,
+                  title: KeyLang.language,
+                  onPress: () {
+                    showDialog(
+                      barrierDismissible: false,
+                      context: context,
+                      builder: (context) {
+                        // * AlertDialogDrawer ******
+                        return AlertDialogDrawer();
+                      },
+                    );
+                  },
+                ),
+
+                // *  *** Theme
+                ListTileDrawer(
+                  icon: PathIcons.theme,
+                  // ? in list on drawer ..
+                  title: _themeText,
+                  iconTrailing: EasyDynamicThemeBtn(),
+                  onPress: () {},
+                ),
+
+                // * *** Terms
+                ListTileDrawer(
+                  icon: PathIcons.terms,
+                  title: KeyLang.terms,
+                  // ? **** OnPress = onTap in List ..
+                  onPress: () {
+                    var route = MaterialPageRoute(
+                      builder: (context) => InnerPage(
+                        title: KeyLang.terms.tr(),
+                        url: PathUrlPage.urlTerms,
+                      ),
+                    );
+                    Navigator.push(context, route);
+                  },
+                ),
+              ],
+            )
+          ],
+        ),
       ),
       // ),
     );

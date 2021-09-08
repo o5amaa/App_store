@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:fprovid_app/Api/handle-api.dart';
 import 'package:fprovid_app/Packages/Screens/Games/Model/controller-game.dart';
 import 'package:fprovid_app/Packages/Screens/News/Model/controller-news.dart';
+import 'package:fprovid_app/Packages/Screens/Social/Model/controller-social.dart';
 import 'package:http/http.dart' as http;
 
 import 'end-point.dart';
@@ -30,8 +31,8 @@ class ApiController extends HandleApi {
       } else {
         throw Exception('Failed To Fetch Data From Servir.');
       }
-    } catch (e) {
-      print('Error Genaral Is  : $e');
+    } catch (ex) {
+      print('Error Genaral Is  : $ex');
     }
     return _data;
   }
@@ -58,8 +59,34 @@ class ApiController extends HandleApi {
       }).catchError((onError) {
         print('Catch Error Is : ${onError.toString()}');
       });
-    } catch (e) {
-      print('Error Genaral Is  : $e');
+    } catch (ex) {
+      print('Error Genaral Is  : $ex');
+    }
+    return _data;
+  }
+
+  @override
+  Future<ModelControllerSocial> getSocial({required String language}) async {
+    String _url = EndPoint.baseUrl + '$language/' + EndPoint.social;
+    Uri _uri = Uri.parse(_url);
+    late ModelControllerSocial _data;
+
+    try {
+      await http
+          .get(_uri)
+          .timeout(Duration(seconds: _timeOut))
+          .then((response) {
+        if (response.statusCode == 200) {
+          var json = jsonDecode(response.body);
+          _data = ModelControllerSocial.fromJson(json);
+        } else {
+          throw Exception('Failed To Fetch Data From Servir.');
+        }
+      }).catchError((onError) {
+        print('Catch Error Is : ${onError.toString()}');
+      });
+    } catch (ex) {
+      print('Error Genaral Is  : $ex');
     }
     return _data;
   }

@@ -24,15 +24,19 @@ class AlertDialogDrawer extends StatelessWidget {
       content: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          FlagDrawer(
-            title: KeyLang.arabic,
-            flag: PathImages.saudi,
-            languag: ConfigLanguage.AR_LOCALE,
+          Expanded(
+            child: FlagDrawer(
+              title: KeyLang.arabic,
+              flag: PathImages.saudi,
+              languag: ConfigLanguage.AR_LOCALE,
+            ),
           ),
-          FlagDrawer(
-            title: KeyLang.english,
-            flag: PathImages.unitedStates,
-            languag: ConfigLanguage.EN_LOCALE,
+          Expanded(
+            child: FlagDrawer(
+              title: KeyLang.english,
+              flag: PathImages.unitedStates,
+              languag: ConfigLanguage.EN_LOCALE,
+            ),
           ),
         ],
       ),
