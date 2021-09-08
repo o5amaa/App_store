@@ -3,4 +3,5 @@ class EndPoint {
   static String name = 'news';
   static String game = 'game';
   static String social = 'social';
+  static String premium = 'premium';
 }

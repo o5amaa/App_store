@@ -27,7 +27,7 @@ class CardSocial extends StatelessWidget {
         ),
         footer: Card(
           elevation: 10,
-          color: AppColors.myBlack.withOpacity(.4),
+          color: AppColors.myGray.withOpacity(.35),
           clipBehavior: Clip.antiAliasWithSaveLayer,
           child: Container(
             padding: EdgeInsets.all(10.sp),

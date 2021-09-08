@@ -17,5 +17,7 @@
     "auto": "Automatic",
     "light": "Light",
     "dark": "Dark",
-    "megabyte":"MB"
+    "megabyte": "MB",
+    "artDesign": "Art Design",
+    "education": "Education"
 }

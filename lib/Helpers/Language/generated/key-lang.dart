@@ -18,4 +18,6 @@ class KeyLang {
   static String light = "light";
   static String dark = "dark";
   static String megabyte = "megabyte";
+  static String artDesign = "artDesign";
+  static String education = "education";
 }

@@ -1,5 +1,6 @@
 import 'package:fprovid_app/Packages/Screens/Games/Model/controller-game.dart';
 import 'package:fprovid_app/Packages/Screens/News/Model/controller-news.dart';
+import 'package:fprovid_app/Packages/Screens/Premium/Model/controller-premium.dart';
 import 'package:fprovid_app/Packages/Screens/Social/Model/controller-social.dart';
 
 abstract class HandleApi {
@@ -9,4 +10,6 @@ abstract class HandleApi {
   Future<ModelControllerGame> getGames({required String language});
   // ? Get Data Social a list ..
   Future<ModelControllerSocial> getSocial({required String language});
+  // ? Get Data Premium  a list ..
+  Future<ModelControllerPremium> getPremium({required String language});
 }

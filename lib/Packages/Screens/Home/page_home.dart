@@ -3,6 +3,7 @@ import 'package:fprovid_app/Packages/Screens/Games/View/page-games.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/list-drawer.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/custom-appbar.dart';
 import 'package:fprovid_app/Packages/Screens/News/View/page-news.dart';
+import 'package:fprovid_app/Packages/Screens/Premium/View/page-premium.dart';
 import 'package:fprovid_app/Packages/Screens/Social/View/pang-social.dart';
 
 class PageHome extends StatelessWidget {
@@ -10,7 +11,7 @@ class PageHome extends StatelessWidget {
   final _pages = [
     PageNews(),
     PageGames(),
-    Container(color: Colors.white),
+    PagePremium(),
     PageSocial(),
   ];
   // * -----------------------------
@@ -26,6 +27,7 @@ class PageHome extends StatelessWidget {
           drawer: ListDrawer(),
           // * ************ Body *************
           body: TabBarView(
+            physics: NeverScrollableScrollPhysics(),
             children: _pages,
           )),
     );
