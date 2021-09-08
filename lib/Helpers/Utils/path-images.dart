@@ -14,4 +14,6 @@ class PathImages {
 //* ***********  Path Netwark Images **************
   static const imageProfile =
       'https://raw.githubusercontent.com/o5amaa/myAppAPI/main/assets/images/login.jpg';
+  static const ImageFacebook =
+      'https://raw.githubusercontent.com/o5amaa/myAppAPI/main/assets/images/login.jpg';
 }

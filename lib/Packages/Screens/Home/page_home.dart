@@ -3,6 +3,7 @@ import 'package:fprovid_app/Packages/Screens/Games/View/page-games.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/list-drawer.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/custom-appbar.dart';
 import 'package:fprovid_app/Packages/Screens/News/View/page-news.dart';
+import 'package:fprovid_app/Packages/Screens/Social/View/pang-social.dart';
 
 class PageHome extends StatelessWidget {
   static const String id = 'PageHome';
@@ -10,7 +11,7 @@ class PageHome extends StatelessWidget {
     PageNews(),
     PageGames(),
     Container(color: Colors.white),
-    Container(color: Colors.pink),
+    PageSocial(),
   ];
   // * -----------------------------
   @override
