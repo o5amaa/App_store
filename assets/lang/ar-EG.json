@@ -17,7 +17,10 @@
     "auto": "تلقائي",
     "light": "فاتح",
     "dark": "داكن",
-    "megabyte": "م ج",
+    "megabyte": "ميجا بايت",
     "artDesign": "التصميم الفني",
-    "education": "التعليم"
+    "education": "التعليم",
+    "type":"النوع",
+    "storage":"الحجم",
+    "download":"التنزيلات"
 }

@@ -20,4 +20,7 @@ class KeyLang {
   static String megabyte = "megabyte";
   static String artDesign = "artDesign";
   static String education = "education";
+  static String type = "type";
+  static String storage = "storage";
+  static String download = "download";
 }

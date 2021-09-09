@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:fprovid_app/Helpers/Theme/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RatingCustom extends StatelessWidget {
@@ -13,12 +12,12 @@ class RatingCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 10.sp),
+      padding: EdgeInsets.only(top: 5.sp),
       child: RatingBarIndicator(
         rating: convertNumber(rating: _rating),
-        itemBuilder: (BuildContext context, index) => Icon(
+        itemBuilder: (context, index) => Icon(
           Icons.star,
-          color: AppColors.myYellow,
+          color: Colors.amber,
         ),
         itemCount: 5,
         itemSize: 20.0.sp,
@@ -30,18 +29,18 @@ class RatingCustom extends StatelessWidget {
   double convertNumber({required String rating}) {
     switch (rating) {
       case '١':
-        return 1.0;
+        return 1;
       case '٢':
-        return 2.0;
+        return 2;
 
       case '٣':
-        return 3.0;
+        return 3;
 
       case '٤':
-        return 4.0;
+        return 4;
 
       case '٥':
-        return 5.0;
+        return 5;
 
       default:
         return double.parse(rating);

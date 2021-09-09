@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fprovid_app/Api/api-controller.dart';
 import 'package:fprovid_app/Helpers/Utils/path-images.dart';
 import 'package:fprovid_app/Packages/Screens/News/Components/card-news.dart';
@@ -7,7 +8,6 @@ import 'package:fprovid_app/Packages/Screens/News/Model/news.dart';
 import 'package:fprovid_app/Packages/Widgets/Loading/app-loading.dart';
 import 'package:fprovid_app/Packages/Widgets/Loading/enum-loading.dart';
 import 'package:fprovid_app/services/language-status.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PageNews extends StatefulWidget {
   static const String id = 'PageNews';
@@ -19,6 +19,7 @@ class PageNews extends StatefulWidget {
 
 class _PageNewsState extends State<PageNews> {
   ApiController _api = ApiController();
+  // ignore: unused_field
   late ModelControllerNews _pdata;
 
   @override

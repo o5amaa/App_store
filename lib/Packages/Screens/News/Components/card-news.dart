@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fprovid_app/Helpers/Language/generated/key-lang.dart';
 import 'package:fprovid_app/Helpers/Theme/app_colors.dart';
-import 'package:fprovid_app/Packages/Screens/Details/View/page-detailes.dart';
+import 'package:fprovid_app/Packages/Screens/Details/View/body.dart';
 import 'package:fprovid_app/Packages/Screens/News/Model/news.dart';
 import 'package:fprovid_app/Packages/Widgets/Cach-image/image-news.dart';
 

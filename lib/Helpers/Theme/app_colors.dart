@@ -15,6 +15,7 @@ class AppColors {
   static Color myBlack = _colorFromHex('#000000');
   static Color myGray = _colorFromHex('#A1A1A1');
   static Color myGreen = _colorFromHex('#216E38');
+  static Color myRed = _colorFromHex('#B41A0F');
   static Color myYellow = _colorFromHex('#FFBB00');
 
   //* Color Light .. 0xFF
@@ -32,4 +33,6 @@ class AppColors {
   //* Color Dark .. 0xFF
   static Color mineColorDark = _colorFromHex('#3B3529');
   static Color darkMode = _colorFromHex('#3A3B3C');
+  static Color darkModeBodyDetails = _colorFromHex('#303030');
+  static Color darkModeCardDetails = _colorFromHex('#484848');
 }

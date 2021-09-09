@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fprovid_app/Helpers/Theme/app_colors.dart';
 import 'package:fprovid_app/Helpers/Utils/path-images.dart';
+import 'package:fprovid_app/Packages/Screens/Details/View/body.dart';
 import 'package:fprovid_app/Packages/Screens/Social/Model/social.dart';
 import 'package:fprovid_app/Packages/Widgets/Cach-image/image-social.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,9 +13,17 @@ class CardSocial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      // width: 180,
-      // height: 180,
+    return GestureDetector(
+      onTap: () {
+        print(_data.id.toString());
+        MaterialPageRoute _route = MaterialPageRoute(
+          builder: (context) => PageDetails(
+            type: 'social',
+            id: _data.id!,
+          ),
+        );
+        Navigator.push(context, _route);
+      },
       child: GridTile(
         child: Container(
           padding: EdgeInsets.all(0),
