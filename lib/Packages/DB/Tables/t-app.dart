@@ -1,6 +1,6 @@
 class TableApp {
-  static final String nameTable = 'Apps'; // * name Table
-  static final String colID = 'id'; // * Colunm
+  static final String nameTable = 'Apps';
+  static final String colID = 'id';
   static final String colNameApp = 'name';
   static final String colImage = 'image';
   static final String colType = 'type';

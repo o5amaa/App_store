@@ -1,54 +1,83 @@
 import 'package:fprovid_app/Packages/DB/Config/init-db.dart';
 import 'package:fprovid_app/Packages/DB/Model/m-app.dart';
 import 'package:fprovid_app/Packages/DB/Tables/t-app.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:sqflite/sqlite_api.dart';
 
 class AppDB {
-  // * private constracter ..
+  // * private Constructor
   AppDB._();
-// * create opject from AppDB ..
+  // created object db
   static final AppDB db = AppDB._();
 
-  // * setip the DB ..
+  // * setup The DB
   static Database? _database;
 
-  // * Cahck DB is Empty ..
+  // * check have DB
   Future<Database> get database async {
     return _database = _database ?? await InitDB.init();
   }
 
-  // *Add row ..
-  Future<bool> insartApp({required ModelAppBD dataApp}) async {
+  // * Insert App
+  Future<bool> insertApp({required ModelAppDB dataApp}) async {
     final Database _db = await database;
     try {
       await _db.insert(TableApp.nameTable, dataApp.toMap());
-      print('Insart ... ');
       return true;
     } catch (e) {
-      print('Error:  $e');
+      print('error : $e');
       return false;
     }
   }
 
-// * Select by id ..
-  Future<ModelAppBD?> getAppById({required String id}) async {
+  // * get By ID
+  Future<ModelAppDB?> getAppById({required String id}) async {
     final Database _db = await database;
     var res = await _db.query(TableApp.nameTable,
         where: "${TableApp.colID} = ?", whereArgs: [id]);
-
-    return res.isNotEmpty ? ModelAppBD.fromMap(res.first) : null;
+    return res.isNotEmpty ? ModelAppDB.fromMap(res.first) : null;
   }
 
-// * Select All ..
-  Future<List<ModelAppBD>> getAllApps() async {
+  // * get All App
+  Future<List<ModelAppDB>> getAllApps() async {
     final Database _db = await database;
-    var res = await _db.query(TableApp.nameTable,
-        orderBy: "${TableApp.colTimeStamp} DESC");
+    var res = await _db.query(
+      TableApp.nameTable,
+      orderBy: "${TableApp.colTimeStamp} DESC",
+    );
 
-    List<ModelAppBD> list = res.isNotEmpty
-        ? res.map((app) => ModelAppBD.fromMap(app)).toList()
+    List<ModelAppDB> list = res.isNotEmpty
+        ? res.map((app) => ModelAppDB.fromMap(app)).toList()
         : [];
 
     return list;
+  }
+
+  // * update App
+  Future<bool> updateApp({required ModelAppDB updateData}) async {
+    final _db = await database;
+
+    try {
+      await _db.update(TableApp.nameTable, updateData.toMap(),
+          where: "${TableApp.colID} = ?", whereArgs: [updateData.id]);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  //  * Delete by id
+  deleteAppById({required String id}) async {
+    final _db = await database;
+    await _db.delete(
+      TableApp.nameTable,
+      where: "${TableApp.colID} = ?",
+      whereArgs: [id],
+    );
+  }
+
+  // * Delete All
+  deleteTableApp() async {
+    final _db = await database;
+    await _db.delete(TableApp.nameTable);
   }
 }

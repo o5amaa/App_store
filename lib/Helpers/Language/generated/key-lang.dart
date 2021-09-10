@@ -17,10 +17,16 @@ class KeyLang {
   static String auto = "auto";
   static String light = "light";
   static String dark = "dark";
+  static String install = 'install';
+  static String uninstall = 'uninstall';
   static String megabyte = "megabyte";
   static String artDesign = "artDesign";
   static String education = "education";
   static String type = "type";
   static String storage = "storage";
   static String download = "download";
+  static String successInstalled = 'successInstalled';
+  static String successUninstalled = 'successUninstalled';
+  static String somethingWrong = 'somethingWrong';
+  static String emptyDownloaded = 'emptyDownloaded';
 }

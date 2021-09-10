@@ -7,6 +7,7 @@ import 'package:fprovid_app/Helpers/Utils/path-url-page.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/alert-dialog.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/Components/custom-til.dart';
 import 'package:fprovid_app/Packages/Screens/Home/Components/Drawer/header-drawer.dart';
+import 'package:fprovid_app/Packages/Screens/My-App/View/page-my-app.dart';
 import 'package:fprovid_app/Packages/Widgets/inner-page/inner-page.dart';
 import 'package:fprovid_app/services/state-theme.dart';
 
@@ -38,7 +39,9 @@ class _ListDrawerState extends State<ListDrawer> {
                 ListTileDrawer(
                   icon: PathIcons.myApp,
                   title: KeyLang.myApps,
-                  onPress: () {},
+                  onPress: () {
+                    Navigator.pushNamed(context, PageMyApp.id);
+                  },
                 ),
                 // * *** Translate
                 ListTileDrawer(

@@ -60,8 +60,8 @@ class PagePremium extends StatelessWidget {
                     HeaderCard(title: KeyLang.education),
                     ListViewPremium(dataList: _education),
                     // **
-                    HeaderCard(title: KeyLang.education),
-                    ListViewPremium(dataList: _education),
+                    // HeaderCard(title: KeyLang.education),
+                    // ListViewPremium(dataList: _education),
                   ],
                 ),
               );

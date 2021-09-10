@@ -17,10 +17,16 @@
     "auto": "تلقائي",
     "light": "فاتح",
     "dark": "داكن",
+    "install": "تثبيت",
+    "uninstall": "الغاء التثبيت",
     "megabyte": "ميجا بايت",
     "artDesign": "التصميم الفني",
     "education": "التعليم",
-    "type":"النوع",
-    "storage":"الحجم",
-    "download":"التنزيلات"
+    "type": "النوع",
+    "storage": "الحجم",
+    "download": "التنزيلات",
+    "successInstalled": "تم التثبيت بنجاح",
+    "somethingWrong": "هناك خطأ ما",
+    "successUninstalled": "تم إلغاء التثبيت بنجاح",
+    "emptyDownloaded": "لا يوجد اي تطبيقات محملة"
 }

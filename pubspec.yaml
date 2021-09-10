@@ -21,23 +21,39 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  cached_network_image: ^3.1.0
-  cupertino_icons: ^1.0.2
-  easy_dynamic_theme: ^2.2.0
-  easy_localization: ^3.0.0
   flutter:
     sdk: flutter
-  flutter_colorpicker: ^0.5.0
-  flutter_rating_bar: ^4.0.0
-  flutter_screenutil: ^5.0.0+2
-  flutter_spinkit: ^5.1.0
-  flutter_svg: ^0.22.0
+  # icons
+  cupertino_icons: ^1.0.2
+  # google fonte
   google_fonts: ^2.1.0
-  http: ^0.13.3
-  path_provider: ^2.0.3
-  provider: ^6.0.0
-  sqflite: ^2.0.0+4
+  # language
+  easy_localization: ^3.0.0
+  # adapting screen and font size.Let your UI display a reasonable layout on different screen sizes!
+  flutter_screenutil: ^5.0.0+2
+  # cache image network
+  cached_network_image: ^3.1.0
+  # Loading
+  flutter_spinkit: ^5.1.0
+  # Svg
+  flutter_svg: ^0.22.0
+  # Web
   webview_flutter: ^2.0.12
+  # theme
+  easy_dynamic_theme: ^2.2.0
+  # http
+  http: ^0.13.3
+  # rating
+  flutter_rating_bar: ^4.0.0
+  # DB
+  sqflite: ^2.0.0+4
+  path_provider: ^2.0.3
+  # alert
+  top_snackbar_flutter: ^1.0.0
+  # state mangmente provider
+  provider: ^6.0.0
+  flutter_colorpicker: ^0.5.0
+  # *******
 
 dev_dependencies:
   flutter_test:

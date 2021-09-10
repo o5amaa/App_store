@@ -17,10 +17,16 @@
     "auto": "Automatic",
     "light": "Light",
     "dark": "Dark",
+    "install": "install",
+    "uninstall": "uninstall",
     "megabyte": "Mega Byte",
     "artDesign": "Art Design",
     "education": "Education",
     "type": "Type",
-    "storage":"Storage",
-    "download":"Download"
+    "storage": "Storage",
+    "download": "Download",
+    "successInstalled": "successfully installed",
+    "successUninstalled": "successfully uninstalled",
+    "somethingWrong": "Something went wrong",
+    "emptyDownloaded": "There are no downloaded applications"
 }

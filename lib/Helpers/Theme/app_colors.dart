@@ -25,6 +25,7 @@ class AppColors {
   static Color bodyTitleColorLight = _colorFromHex('#49402F');
   static Color lightModeInstallBtn = _colorFromHex('#456369');
   static Color lightModeUnInstallBtn = _colorFromHex('#e95f44');
+  static Color lightModeToast = _colorFromHex('#90ee02');
 
   static Color profileLoadingLight = _colorFromHex('#0A4091');
   // *
@@ -35,4 +36,8 @@ class AppColors {
   static Color darkMode = _colorFromHex('#3A3B3C');
   static Color darkModeBodyDetails = _colorFromHex('#303030');
   static Color darkModeCardDetails = _colorFromHex('#484848');
+  static Color darkModeUnInstallBtn = _colorFromHex('#FF0266');
+  static Color darkModeToast = _colorFromHex('#BB86FC');
+
+  static Color darkModeInstallBtn = _colorFromHex('#BB86FC');
 }
