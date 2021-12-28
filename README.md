@@ -1,6 +1,7 @@
 # fprovid_app
 
-A new Flutter project.
+A new Flutter project is App Store.
+from JRO
 
 ## Getting Started
 
